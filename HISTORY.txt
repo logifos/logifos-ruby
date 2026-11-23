@@ -1,9 +1,14 @@
 Unreleased
 
+No version has been released. The 0.1.0 version constant identifies the bootstrap.
+
+Added the Ruby gem skeleton and installed-package checks. The gem builds,
+installs and loads, but rendering raises NotImplementedError. Native and
+portable runtime integration is planned and is not included in this package.
+
 Added Ruby lint rules, development tooling and documentation whitespace checks
 to continuous integration.
 
-0.1.0
-
-Introduced the Ruby gem skeleton and installed package checks. Rendering raises
-NotImplementedError while the engine integration is pending.
+Documented the current implementation limits, locally verified development
+commands, planned runtime roles and release policy. No migrations exist yet
+because there is no released version to migrate from.
