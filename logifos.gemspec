@@ -21,8 +21,14 @@ Gem::Specification.new do |spec|
     LICENSE.txt
     README.md
     lib/logifos.rb
+    lib/logifos/errors.rb
+    lib/logifos/native_library.rb
+    lib/logifos/native_runtime.rb
+    lib/logifos/response.rb
     lib/logifos/version.rb
   ]
   spec.require_paths = ["lib"]
+  spec.add_dependency "ffi", "~> 1.17"
+  spec.add_dependency "json", "~> 2.6"
   spec.metadata["rubygems_mfa_required"] = "true"
 end

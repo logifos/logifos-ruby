@@ -1,13 +1,14 @@
 # frozen_string_literal: true
 
 require_relative "logifos/version"
+require_relative "logifos/errors"
+require_relative "logifos/native_runtime"
 
 module Logifos
-  # The render boundary: formula models in (the plurimath common model),
-  # SVG or PNG bytes out, through the logifos engine. P0 carries the
-  # contract; the engine call lands with P4.
-  def self.render(formula_model, format: :svg)
-    raise NotImplementedError,
-          "the logifos engine boundary lands in P4 (got #{format.inspect})"
+  # Uses only the explicitly selected native library and caller's contract.
+  def self.render(formula_model, library_path:, formula_contract:, format: :svg, options: {})
+    NativeRuntime.new(library_path: library_path).render(
+      formula_model, formula_contract: formula_contract, format: format, options: options
+    )
   end
 end
