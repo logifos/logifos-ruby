@@ -16,7 +16,12 @@ Gem::Specification.new do |spec|
   spec.homepage = "https://github.com/logifos/logifos-ruby"
   spec.license = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 3.2.0")
-  spec.files = Dir["lib/**/*.rb", "README.md", "LICENSE.txt"]
+  spec.files = %w[
+    LICENSE.txt
+    README.md
+    lib/logifos.rb
+    lib/logifos/version.rb
+  ]
   spec.require_paths = ["lib"]
   spec.add_development_dependency "rspec"
 

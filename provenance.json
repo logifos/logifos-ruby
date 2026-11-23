@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "declaration": {
+    "author": "Logifos contributors",
+    "no_renderer_source_data_output_copied": true,
+    "statement": "All card 06 changes were freshly authored for Logifos. No renderer source, data, output, packaging scripts, fixtures or renamed fragments were copied."
+  },
+  "files": {
+    ".github/workflows/ci.yml": {
+      "author": "Logifos contributors",
+      "origin": "fresh-logifos",
+      "kind": "infrastructure",
+      "license": "MIT",
+      "description": "Fresh focused source and installed-package smoke steps; retain minimum Ruby and extend the existing matrix.",
+      "specification_refs": []
+    },
+    "logifos.gemspec": {
+      "author": "Logifos contributors",
+      "origin": "fresh-logifos",
+      "kind": "infrastructure",
+      "license": "MIT",
+      "description": "Fresh explicit four-file packaging allowlist for existing Logifos Ruby sources and MIT notice.",
+      "specification_refs": []
+    },
+    "spec/package_smoke_spec.rb": {
+      "author": "Logifos contributors",
+      "origin": "fresh-logifos",
+      "kind": "implementation",
+      "license": "MIT",
+      "description": "Fresh package qualification spec built from current Logifos bootstrap API and packaging contract; fresh consumer probes check refusal rather than renderer output.",
+      "specification_refs": []
+    },
+    "provenance.json": {
+      "author": "Logifos contributors",
+      "origin": "fresh-logifos",
+      "kind": "documentation",
+      "license": "MIT",
+      "description": "Fresh provenance inventory and independent-authorship declaration for card 06.",
+      "specification_refs": []
+    }
+  }
+}
