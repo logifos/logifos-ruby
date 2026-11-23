@@ -1,0 +1,9 @@
+Unreleased
+
+Added Ruby lint rules, development tooling and documentation whitespace checks
+to continuous integration.
+
+0.1.0
+
+Introduced the Ruby gem skeleton and installed package checks. Rendering raises
+NotImplementedError while the engine integration is pending.

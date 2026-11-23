@@ -1,0 +1,73 @@
+plugins:
+  - rubocop-rake
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 3.2
+  NewCops: enable
+  Exclude:
+    - vendor/**/*
+    - tmp/**/*
+    - .codex-context/**/*
+
+Layout/LineLength:
+  Max: 120
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+
+# The bootstrap module documents its render boundary at the method.
+Style/Documentation:
+  Exclude:
+    - lib/logifos.rb
+
+# This spec exercises the public render method in isolation.
+RSpec/SpecFilePathFormat:
+  Exclude:
+    - spec/render_spec.rb
+
+# The package integration fixture builds and installs once per group, shares
+# immutable package facts and checks the installed gem in child processes.
+Lint/ConstantDefinitionInBlock:
+  Exclude:
+    - spec/package_smoke_spec.rb
+
+Metrics/MethodLength:
+  Exclude:
+    - spec/package_smoke_spec.rb
+
+RSpec/BeforeAfterAll:
+  Exclude:
+    - spec/package_smoke_spec.rb
+
+RSpec/DescribeClass:
+  Exclude:
+    - spec/package_smoke_spec.rb
+
+RSpec/ExampleLength:
+  Exclude:
+    - spec/package_smoke_spec.rb
+
+RSpec/InstanceVariable:
+  Exclude:
+    - spec/package_smoke_spec.rb
+
+RSpec/LeakyConstantDeclaration:
+  Exclude:
+    - spec/package_smoke_spec.rb
+
+RSpec/LeakyLocalVariable:
+  Exclude:
+    - spec/package_smoke_spec.rb
+
+RSpec/MultipleExpectations:
+  Exclude:
+    - spec/package_smoke_spec.rb
+
+# Single-quoted delimiters make child-process Ruby scripts literal.
+Style/RedundantHeredocDelimiterQuotes:
+  Exclude:
+    - spec/package_smoke_spec.rb

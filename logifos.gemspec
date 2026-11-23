@@ -17,13 +17,12 @@ Gem::Specification.new do |spec|
   spec.license = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 3.2.0")
   spec.files = %w[
+    HISTORY.txt
     LICENSE.txt
     README.md
     lib/logifos.rb
     lib/logifos/version.rb
   ]
   spec.require_paths = ["lib"]
-  spec.add_development_dependency "rspec"
-
   spec.metadata["rubygems_mfa_required"] = "true"
 end

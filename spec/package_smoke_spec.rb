@@ -9,7 +9,7 @@ require "tmpdir"
 
 RSpec.describe "the installed bootstrap gem" do
   PACKAGE_FILES = %w[
-    LICENSE.txt README.md lib/logifos.rb lib/logifos/version.rb
+    HISTORY.txt LICENSE.txt README.md lib/logifos.rb lib/logifos/version.rb
   ].freeze
   LICENSE_SHA256 =
     "2d0f8a412f45f64d0e2bba4f9592907371613f219fe01f2e7a88c0381a672d07"
@@ -86,7 +86,7 @@ RSpec.describe "the installed bootstrap gem" do
     expect(output.strip).to eq("0.1.0")
   end
 
-  [:default, :svg, :png].each do |format|
+  %i[default svg png].each do |format|
     call = format == :default ? "Logifos.render({})" : "Logifos.render({}, format: :#{format})"
     expected_format = format == :default ? :svg : format
     it "explicitly refuses #{format} rendering from the installed gem" do
