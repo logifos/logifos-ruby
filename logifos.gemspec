@@ -18,5 +18,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = Gem::Requirement.new(">= 3.2.0")
   spec.files = Dir["lib/**/*.rb", "README.md", "LICENSE.txt"]
   spec.require_paths = ["lib"]
+  spec.add_development_dependency "rspec"
+
   spec.metadata["rubygems_mfa_required"] = "true"
 end
