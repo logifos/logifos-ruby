@@ -14,8 +14,13 @@ jobs:
         ruby: [ '3.2', '3.3', '3.4' ]
     steps:
       - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
+      # The parse/negotiate examples need the packaged engine artifact; the
+      # render examples additionally need a MATH-table font and skip when
+      # LOGIFOS_FONT points nowhere.
+      - run: ./scripts/build-engine.sh
       - run: bundle exec rspec
