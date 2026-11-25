@@ -33,7 +33,10 @@ module Logifos
         op: "render", formula: parsed["result"]["model"],
         formula_contract: parsed["result"]["formula_contract"],
         output: "svg",
-        options: { fonts: [font] },
+        options: {
+          fonts: [font],
+          fallback_order: [font.fetch(:id)],
+        },
       )
       reply["result"]["svg"]
     end
